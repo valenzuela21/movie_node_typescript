@@ -14,7 +14,8 @@ dotenv.config({path: ".env"});
 const paths = {
     home:       "/",
     auth:       "/api/auth",
-    movie:      "/api/movie"
+    movie:      "/api/movie",
+    comment:    "/api/comment"
 };
 
 dbConnection();
@@ -27,14 +28,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 
-app.use(
-    express.static(path.join(__dirname, "public"))
-);
-
 
 app.use( paths.home, API_ROUTER.homeRouter);
 app.use( paths.auth, API_ROUTER.authRouter);
 app.use( paths.movie, API_ROUTER.movieRouter);
+app.use( paths.comment, API_ROUTER.commentRouter);
 
 
 export default app;
