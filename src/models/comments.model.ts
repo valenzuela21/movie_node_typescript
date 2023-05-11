@@ -3,7 +3,7 @@ import {ObjectId} from "mongodb";
 
 export interface  IComment {
     comment: string,
-    state: boolean,
+    state?: boolean,
     user: ObjectId
 }
 
@@ -16,7 +16,7 @@ const CommentSchema =  new Schema<IComment>({
     state:{
         type: Boolean,
         default: true,
-        required: true
+        required: false
     },
     user:{
         type: Schema.Types.ObjectId,
