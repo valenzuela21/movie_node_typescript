@@ -4,7 +4,8 @@ import {ObjectId} from "mongodb";
 export interface  IComment {
     comment: string,
     state?: boolean,
-    user: ObjectId
+    user: ObjectId,
+    movie: ObjectId
 }
 
 
@@ -21,6 +22,11 @@ const CommentSchema =  new Schema<IComment>({
     user:{
         type: Schema.Types.ObjectId,
         ref: "User",
+        required: true
+    },
+    movie:{
+        type: Schema.Types.ObjectId,
+        ref: "Movie",
         required: true
     }
 });

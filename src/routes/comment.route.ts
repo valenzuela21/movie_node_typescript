@@ -8,6 +8,7 @@ import {body} from "express-validator";
 router.post("/",
     validateJwt,
     body("comment", "El comentario es requerido").not().isEmpty(),
+    body("movie", "El campo ID Movie es requerido").not().isEmpty().isMongoId().withMessage("La ID Movie no es valida"),
     validateInputs
     ,CommentController.addComment);
 
