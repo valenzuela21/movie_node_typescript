@@ -8,7 +8,6 @@ import {body} from "express-validator";
 router.post("/",
     validateJwt,
     body("comment", "El comentario es requerido").not().isEmpty(),
-    body("user", "El user ID es requerido").not().isEmpty(),
     validateInputs
     ,CommentController.addComment);
 
