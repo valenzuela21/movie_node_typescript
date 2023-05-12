@@ -27,13 +27,16 @@ export const addComment = async (req: Request | any, res: Response) => {
     res.status(201).json(comments);
 };
 
-
+export const listComments = async (req: Request | any, res: Response) => {
+    const comments =  await Comment.find().populate("movie").populate("user", ["name", "email"]);
+   res.status(201).json(comments);
+};
 
 
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
     const offset: number = req.body.offset - 1 | 0;
     const per_page: number = req.body.per_page | 12;
-    const movieDB = await Comment.aggregate(
+    const commentsGroupDB = await Comment.aggregate(
         [
             {
                 $group: {
@@ -60,7 +63,7 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
     );
 
     res.status(201).json({
-        data: movieDB,
+        data: commentsGroupDB,
         page: offset + 1,
         limit: per_page
     });

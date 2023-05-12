@@ -5,6 +5,7 @@ import {validateJwt} from "../helpers/validateJwt.help";
 import {validateInputs} from "../middlewares/validate-inputs";
 import {body} from "express-validator";
 import {validateNumberNegative} from "../middlewares/validate-number-negative";
+import {listComments} from "../controllers/comment.controller";
 
 router.post("/",
     validateJwt,
@@ -13,7 +14,9 @@ router.post("/",
     validateInputs
     ,CommentController.addComment);
 
-
+router.get("/list",[
+    validateNumberNegative
+], CommentController.listComments);
 
 router.get("/list_group",[
     validateNumberNegative
