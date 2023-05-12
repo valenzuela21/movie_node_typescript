@@ -29,6 +29,25 @@ export const addComment = async (req: Request | any, res: Response) => {
 
 
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
+    if(req.body.offset <= 0){
+        return res.status(401).json({
+            msg: "No se permite números negativos"
+        });
+    }
+    const offset: number = req.body.offset - 1 | 0;
+    const per_page: number = req.body.per_page | 1;
+    const movieGeneralGroup = await Comment.aggregate(
+        [
+            {
+                $group: {
+                    _id: "$user",
+                    movie: {
+                        "$push": "$movie"
+                    },
+                    total: {$sum: 1}
+                },
+
+            },]);
     const movieDB = await Comment.aggregate(
         [
             {
@@ -41,9 +60,9 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                 },
 
             },
-           {
+            {
                 $lookup: {
-                    from:"users",
+                    from: "users",
                     localField: "_id",
                     foreignField: "_id",
                     as: "_id"
@@ -51,16 +70,23 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
             },
             {
                 $lookup: {
-                    from:"movies",
+                    from: "movies",
                     localField: "movie",
                     foreignField: "_id",
                     as: "movie"
                 }
             },
-            {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]}
+            {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]},
+            {"$skip": offset},
+            {"$limit": per_page},
         ]
     );
 
-    res.status(201).json(movieDB);
+    res.status(201).json({
+        data: movieDB,
+        page: offset + 1,
+        limit: per_page,
+        total: movieGeneralGroup.length
+    });
 
 };
