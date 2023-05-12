@@ -15,7 +15,8 @@ const paths = {
     home:       "/",
     auth:       "/api/auth",
     movie:      "/api/movie",
-    comment:    "/api/comment"
+    comment:    "/api/comment",
+    vote:       "/api/vote"
 };
 
 dbConnection();
@@ -33,6 +34,7 @@ app.use( paths.home, API_ROUTER.homeRouter);
 app.use( paths.auth, API_ROUTER.authRouter);
 app.use( paths.movie, API_ROUTER.movieRouter);
 app.use( paths.comment, API_ROUTER.commentRouter);
+app.use( paths.vote, API_ROUTER.voteRouter);
 
 
 export default app;

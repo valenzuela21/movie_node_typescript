@@ -1,11 +1,11 @@
-import router from "./auth.route";
 import {validateJwt} from "../helpers/validateJwt.help";
 import * as MovieController from "../controllers/movie.controller";
 import {body} from "express-validator";
 import {validateInputs} from "../middlewares/validate-inputs";
 import {validateNumberNegative} from "../middlewares/validate-number-negative";
+import {Router} from "express";
 
-
+const router: Router = Router();
 
 router.get("/list",[
     validateNumberNegative

@@ -42,8 +42,8 @@ export const listComments = async (req: Request | any, res: Response) => {
 
 
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
-    const offset: number = req.body.offset - 1 | 0;
-    const per_page: number = req.body.per_page | 12;
+    const offset: number = req.body.offset - 1 ||  0;
+    const per_page: number = req.body.per_page ||  12;
     const commentsGroupDB = await Comment.aggregate(
         [
             {
@@ -78,16 +78,16 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
 
 };
 
-export const deleteComment = async (req: Request, res: Response, next: NextFunction) => {
+export const deleteComment = async (req: Request, res: Response) => {
     const comment_id: string = req.params.id;
     try{
         await Comment.findOneAndDelete({ _id : comment_id });
         res.status(201).json({
             msg: "Se ha eliminado correctamente el item de comentarios"
-        })
+        });
     }catch (err){
         res.status(500).json({
             msg: "Error no se pudo eliminar dicho item"
-        })
+        });
     }
 };
