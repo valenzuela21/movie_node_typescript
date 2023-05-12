@@ -10,7 +10,9 @@ export interface IUser{
     email: string,
     password: string,
     rol: string,
-    state: boolean
+    state: boolean,
+    created_at?: Date,
+    updated_at?: Date
 }
 
 const UserSchema = new Schema<IUser>({
@@ -35,7 +37,9 @@ const UserSchema = new Schema<IUser>({
     state: {
         type: Boolean,
         default: true
-    }
+    },
+    created_at: { type: Date, required: false, default: Date.now },
+    updated_at: { type: Date, required: false, default: Date.now }
 });
 
 
