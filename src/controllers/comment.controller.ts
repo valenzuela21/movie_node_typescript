@@ -31,7 +31,6 @@ export const addComment = async (req: Request | any, res: Response) => {
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
     const movieDB = await Comment.aggregate(
         [
-            { $unwind: "$movie" },
             {
                 $group : {
                     _id : "$user",
