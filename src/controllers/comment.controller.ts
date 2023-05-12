@@ -33,9 +33,10 @@ export const listComments = async (req: Request | any, res: Response) => {
     const comments = await Comment.find()
         .populate("movie")
         .populate("user", ["name", "email"])
+        .sort( { _id: 1 } )
         .skip( pageNumber > 0 ? ( ( pageNumber - 1 ) * nPerPage ) : 0 )
         .limit( nPerPage );
-    ;
+    
     res.status(201).json(comments);
 };
 
