@@ -6,6 +6,7 @@ import {validateJwt} from "../helpers/validateJwt.help";
 const router: Router = Router();
 
 router.get("/", [], VoteController.listVoteMovie);
+router.get("/list_group", [], VoteController.listGroupVoteByMovie);
 router.post("/", [
     validateJwt,
     body("score", "Ingrese el campo score no puede estar vacio").not().isEmpty().isInt({ min: 0, max: 5 }).withMessage("El campo score es númerico de 0 a 5"),

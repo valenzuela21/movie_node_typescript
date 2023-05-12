@@ -42,8 +42,8 @@ export const listComments = async (req: Request | any, res: Response) => {
 
 
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
-    const offset: number = req.body.offset - 1 ||  0;
-    const per_page: number = req.body.per_page ||  12;
+    const pageNumber: number = req.body.offset || 1;
+    const nPerPage: number = req.body.perpage || 12;
     const commentsGroupDB = await Comment.aggregate(
         [
             {
@@ -65,15 +65,15 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                 }
             },
             {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]},
-            {"$skip": offset},
-            {"$limit": per_page}
+            {"$skip": pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0},
+            {"$limit": nPerPage}
         ]
     );
 
     res.status(201).json({
         data: commentsGroupDB,
-        page: offset + 1,
-        limit: per_page
+        page: pageNumber + 1,
+        limit: nPerPage
     });
 
 };

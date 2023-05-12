@@ -27,8 +27,7 @@ export const addNewMovie = async (req: Request, res: Response) => {
 
     const data: IMovie = {
         title,
-        description,
-        vote: 0
+        description
     };
 
     const movie = new Movie(data);
