@@ -35,11 +35,19 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                 $group: {
                     _id: "$user",
                     movie: {
-                        $push: "$movie"
+                        "$push": "$movie"
                     },
                     total: {$sum: 1}
                 },
 
+            },
+           {
+                $lookup: {
+                    from:"users",
+                    localField: "_id",
+                    foreignField: "_id",
+                    as: "_id"
+                }
             },
             {
                 $lookup: {
@@ -49,17 +57,10 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                     as: "movie"
                 }
             },
-            {
-                $match: {
-                    movie: {
-                        $ne: []
-                    }
-                }
-            }
+
         ]
     );
 
-    console.log(movieDB);
-
+    res.status(201).json(movieDB);
 
 };
