@@ -1,7 +1,6 @@
 import {NextFunction, Request, Response} from "express";
 import {IComment, Comment} from "../models/comments.model";
 import {Movie} from "../models/movie.model";
-import {ObjectId} from "mongodb";
 
 export const addComment = async (req: Request | any, res: Response) => {
     const {comment, state, movie} = req.body;
@@ -84,14 +83,11 @@ export const deleteComment = async (req: Request, res: Response, next: NextFunct
     try{
         await Comment.findOneAndDelete({ _id : comment_id });
         res.status(201).json({
-            msg: "Se ha eliminado correctamente esl item de comentarios"
+            msg: "Se ha eliminado correctamente el item de comentarios"
         })
     }catch (err){
         res.status(500).json({
             msg: "Error no se pudo eliminar dicho item"
         })
     }
-
-
-
 };
