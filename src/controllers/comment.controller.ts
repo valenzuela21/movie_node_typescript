@@ -28,8 +28,15 @@ export const addComment = async (req: Request | any, res: Response) => {
 };
 
 export const listComments = async (req: Request | any, res: Response) => {
-    const comments =  await Comment.find().populate("movie").populate("user", ["name", "email"]);
-   res.status(201).json(comments);
+    const offset: number = req.body.offset - 1 | 0;
+    const per_page: number = req.body.per_page | 12;
+    const comments = await Comment.find()
+        .populate("movie")
+        .populate("user", ["name", "email"])
+        .skip(offset)
+        .limit(per_page)
+    ;
+    res.status(201).json(comments);
 };
 
 

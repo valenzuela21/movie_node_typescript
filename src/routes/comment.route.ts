@@ -14,7 +14,7 @@ router.post("/",
     validateInputs
     ,CommentController.addComment);
 
-router.get("/list",[
+router.get("/list", [
     validateNumberNegative
 ], CommentController.listComments);
 
