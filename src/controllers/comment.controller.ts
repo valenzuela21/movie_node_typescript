@@ -57,7 +57,7 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                     as: "movie"
                 }
             },
-
+            {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]}
         ]
     );
 
