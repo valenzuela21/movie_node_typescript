@@ -3,7 +3,7 @@ import router from "./home.route";
 import * as CommentController from "../controllers/comment.controller";
 import {validateJwt} from "../helpers/validateJwt.help";
 import {validateInputs} from "../middlewares/validate-inputs";
-import {body} from "express-validator";
+import {body, param, query} from "express-validator";
 import {validateNumberNegative} from "../middlewares/validate-number-negative";
 import {listComments} from "../controllers/comment.controller";
 
@@ -22,4 +22,5 @@ router.get("/list_group",[
     validateNumberNegative
 ], CommentController.listCommentsByGroup);
 
+router.delete("/:id", [ validateJwt ], CommentController.deleteComment);
 export default router;

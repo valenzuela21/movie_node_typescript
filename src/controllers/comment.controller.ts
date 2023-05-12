@@ -1,6 +1,7 @@
-import {Request, Response} from "express";
+import {NextFunction, Request, Response} from "express";
 import {IComment, Comment} from "../models/comments.model";
 import {Movie} from "../models/movie.model";
+import {ObjectId} from "mongodb";
 
 export const addComment = async (req: Request | any, res: Response) => {
     const {comment, state, movie} = req.body;
@@ -33,10 +34,10 @@ export const listComments = async (req: Request | any, res: Response) => {
     const comments = await Comment.find()
         .populate("movie")
         .populate("user", ["name", "email"])
-        .sort( { _id: 1 } )
-        .skip( pageNumber > 0 ? ( ( pageNumber - 1 ) * nPerPage ) : 0 )
-        .limit( nPerPage );
-    
+        .sort({_id: 1})
+        .skip(pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0)
+        .limit(nPerPage);
+
     res.status(201).json(comments);
 };
 
@@ -75,5 +76,22 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
         page: offset + 1,
         limit: per_page
     });
+
+};
+
+export const deleteComment = async (req: Request, res: Response, next: NextFunction) => {
+    const comment_id: string = req.params.id;
+    try{
+        await Comment.findOneAndDelete({ _id : comment_id });
+        res.status(201).json({
+            msg: "Se ha eliminado correctamente esl item de comentarios"
+        })
+    }catch (err){
+        res.status(500).json({
+            msg: "Error no se pudo eliminar dicho item"
+        })
+    }
+
+
 
 };
