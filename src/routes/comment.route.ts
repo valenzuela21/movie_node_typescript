@@ -12,4 +12,8 @@ router.post("/",
     validateInputs
     ,CommentController.addComment);
 
+
+
+router.get("/list_group",[], CommentController.listCommentsByGroup);
+
 export default router;

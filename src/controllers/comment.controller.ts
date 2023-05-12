@@ -26,3 +26,20 @@ export const addComment = async (req: Request | any, res: Response) => {
 
     res.status(201).json(comments);
 };
+
+
+export const listCommentsByGroup = async (req: Request | any, res: Response) => {
+    const movieDB = await Comment.aggregate(
+        [
+            {
+            $group : {
+                _id : "$user",
+                movie: {
+                    "$addToSet" : "$movie"
+                },
+                total : { $sum : 1 }
+            },
+        }]
+    );
+    console.log(movieDB);
+};
