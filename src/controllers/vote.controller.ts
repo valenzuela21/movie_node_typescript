@@ -21,6 +21,7 @@ export const addVoteMovie = async (req: Request | any, res: Response) => {
         res.status(401).json({
             msg: "No puedes votar..."
         });
+        return;
     }
 
 
