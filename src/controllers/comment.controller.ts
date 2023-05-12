@@ -7,9 +7,9 @@ export const addComment = async (req: Request | any, res: Response) => {
 
     const movieDB = await Movie.findById({_id: movie});
 
-    if(!movieDB){
+    if (!movieDB) {
         return res.status(200).json({
-           msg: "Error no existe esta movie en la base de datos"
+            msg: "Error no existe esta movie en la base de datos"
         });
     }
 
@@ -32,17 +32,18 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
     const movieDB = await Comment.aggregate(
         [
             {
-                $group : {
-                    _id : "$user",
+                $group: {
+                    _id: "$user",
                     movie: {
-                        "$push" : "$movie"
+                        "$push": "$movie"
                     },
-                    total : { $sum :  1 }
+                    total: {$sum: 1}
                 },
 
             },
-           ]
+        ]
     );
+
     console.log(movieDB);
 
 
