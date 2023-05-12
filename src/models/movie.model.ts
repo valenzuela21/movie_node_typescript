@@ -1,8 +1,9 @@
 import {model, Schema} from "mongoose";
+import {IVote} from "./vote.model";
 export interface IMovie {
     title: string,
     description?: string,
-    vote?: number,
+
 }
 
 const MovieSchema =  new Schema<IMovie>({
@@ -14,11 +15,7 @@ const MovieSchema =  new Schema<IMovie>({
         type: String,
         required: false
     },
-    vote:{
-        type: Number,
-        date: Date,
-        required: false
-    },
+
 });
 
 export const Movie = model<IMovie>("Movie", MovieSchema);
