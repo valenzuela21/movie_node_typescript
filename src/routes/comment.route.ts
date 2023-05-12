@@ -4,6 +4,7 @@ import * as CommentController from "../controllers/comment.controller";
 import {validateJwt} from "../helpers/validateJwt.help";
 import {validateInputs} from "../middlewares/validate-inputs";
 import {body} from "express-validator";
+import {validateNumberNegative} from "../middlewares/validate-number-negative";
 
 router.post("/",
     validateJwt,
@@ -14,6 +15,8 @@ router.post("/",
 
 
 
-router.get("/list_group",[], CommentController.listCommentsByGroup);
+router.get("/list_group",[
+    validateNumberNegative
+], CommentController.listCommentsByGroup);
 
 export default router;

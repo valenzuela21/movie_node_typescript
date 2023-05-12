@@ -28,14 +28,11 @@ export const addComment = async (req: Request | any, res: Response) => {
 };
 
 
+
+
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
-    if(req.body.offset <= 0){
-        return res.status(401).json({
-            msg: "No se permite números negativos"
-        });
-    }
     const offset: number = req.body.offset - 1 | 0;
-    const per_page: number = req.body.per_page | 1;
+    const per_page: number = req.body.per_page | 12;
     const movieGeneralGroup = await Comment.aggregate(
         [
             {
