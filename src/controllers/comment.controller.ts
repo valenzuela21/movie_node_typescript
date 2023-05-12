@@ -33,18 +33,6 @@ export const addComment = async (req: Request | any, res: Response) => {
 export const listCommentsByGroup = async (req: Request | any, res: Response) => {
     const offset: number = req.body.offset - 1 | 0;
     const per_page: number = req.body.per_page | 12;
-    const movieGeneralGroup = await Comment.aggregate(
-        [
-            {
-                $group: {
-                    _id: "$user",
-                    movie: {
-                        "$push": "$movie"
-                    },
-                    total: {$sum: 1}
-                },
-
-            },]);
     const movieDB = await Comment.aggregate(
         [
             {
@@ -53,9 +41,9 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                     comment: {
                         "$push": "$comment"
                     },
-                    total: {$sum: 1}
+                    total: {$sum: 1},
+                    //count: { $count: { } }
                 },
-
             },
             {
                 $lookup: {
@@ -67,15 +55,14 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
             },
             {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]},
             {"$skip": offset},
-            {"$limit": per_page},
+            {"$limit": per_page}
         ]
     );
 
     res.status(201).json({
         data: movieDB,
         page: offset + 1,
-        limit: per_page,
-        total: movieGeneralGroup.length
+        limit: per_page
     });
 
 };
