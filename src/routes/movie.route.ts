@@ -1,13 +1,20 @@
 import router from "./auth.route";
 import {validateJwt} from "../helpers/validateJwt.help";
-import {addNewMovie} from "../controllers/movie.controller";
+import * as MovieController from "../controllers/movie.controller";
 import {body} from "express-validator";
 import {validateInputs} from "../middlewares/validate-inputs";
+import {validateNumberNegative} from "../middlewares/validate-number-negative";
+
+
+
+router.get("/list",[
+    validateNumberNegative
+],  MovieController.listMovies);
 
 router.post("/",[
     validateJwt,
     body("title", "El campo titulo es requerido").not().isEmpty(),
     validateInputs
-], addNewMovie);
+], MovieController.addNewMovie);
 
 export default router;

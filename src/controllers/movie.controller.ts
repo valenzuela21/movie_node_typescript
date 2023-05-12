@@ -1,6 +1,17 @@
 import {Request, Response} from "express";
 import {IMovie, Movie} from "../models/movie.model";
 
+export const listMovies  =  async (req: Request, res: Response) => {
+    const pageNumber: number = req.body.offset || 1;
+    const nPerPage: number = req.body.perpage || 12;
+    const movies = await Movie.find()
+        .skip( pageNumber > 0 ? ( ( pageNumber - 1 ) * nPerPage ) : 0 )
+        .limit( nPerPage );
+    return res.status(201).json(movies);
+};
+
+
+
 export const addNewMovie = async (req: Request, res: Response) => {
 
     const {title, description} = req.body;

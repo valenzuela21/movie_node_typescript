@@ -28,13 +28,13 @@ export const addComment = async (req: Request | any, res: Response) => {
 };
 
 export const listComments = async (req: Request | any, res: Response) => {
-    const offset: number = req.body.offset - 1 | 0;
-    const per_page: number = req.body.per_page | 12;
+    const pageNumber: number = req.body.offset || 1;
+    const nPerPage: number = req.body.perpage || 12;
     const comments = await Comment.find()
         .populate("movie")
         .populate("user", ["name", "email"])
-        .skip(offset)
-        .limit(per_page)
+        .skip( pageNumber > 0 ? ( ( pageNumber - 1 ) * nPerPage ) : 0 )
+        .limit( nPerPage );
     ;
     res.status(201).json(comments);
 };
