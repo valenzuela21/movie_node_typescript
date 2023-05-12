@@ -27,7 +27,7 @@ const CommentSchema =  new Schema<IComment>({
     movie:{
         type: Schema.Types.ObjectId,
         ref: "Movie",
-        required: true
+        required: true,
     }
 });
 

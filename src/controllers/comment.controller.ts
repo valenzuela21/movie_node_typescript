@@ -40,8 +40,10 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                     total : { $sum :  1 }
                 },
 
-            }
+            },
            ]
     );
     console.log(movieDB);
+
+
 };
