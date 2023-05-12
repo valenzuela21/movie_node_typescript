@@ -53,8 +53,8 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
             {
                 $group: {
                     _id: "$user",
-                    movie: {
-                        "$push": "$movie"
+                    comment: {
+                        "$push": "$comment"
                     },
                     total: {$sum: 1}
                 },
@@ -66,14 +66,6 @@ export const listCommentsByGroup = async (req: Request | any, res: Response) => 
                     localField: "_id",
                     foreignField: "_id",
                     as: "_id"
-                }
-            },
-            {
-                $lookup: {
-                    from: "movies",
-                    localField: "movie",
-                    foreignField: "_id",
-                    as: "movie"
                 }
             },
             {$unset: ["_id.password", "_id.email", "_id.rol", "_id.state"]},
