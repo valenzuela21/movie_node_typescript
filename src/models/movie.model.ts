@@ -8,7 +8,7 @@ export interface IMovie {
 const MovieSchema =  new Schema<IMovie>({
     title:{
         type: String,
-        required: [true, "El nombre es obligatorio"]
+        required: [true, "El campo title es obligatorio"]
     },
     description:{
         type: String,
