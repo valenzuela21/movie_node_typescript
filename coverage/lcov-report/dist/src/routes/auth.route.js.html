@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.71% </span>
+                <span class="strong">47.22% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/35</span>
+                <span class='fraction'>17/36</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.57% </span>
+                <span class="strong">55.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/28</span>
+                <span class='fraction'>16/29</span>
             </div>
         
             
@@ -108,8 +108,9 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -120,39 +121,40 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 var __createBinding = (this &amp;&amp; this.__createBinding) || (Object.create ? (<span class="fstat-no" title="function not covered" >fu</span>nction(o, m, k, k2) {
 <span class="cstat-no" title="statement not covered" >    if (k2 === undefined) <span class="cstat-no" title="statement not covered" >k2 = k;</span></span>
@@ -182,6 +184,7 @@ const express_1 = require("express");
 const express_validator_1 = require("express-validator");
 const AuthController = __importStar(require("../controllers/auth.controller"));
 const validate_inputs_1 = require("../middlewares/validate-inputs");
+const db_validators_custom_help_1 = require("../helpers/db-validators-custom.help");
 const router = (0, express_1.Router)();
 router.get("/list_users", [], AuthController.listUsers);
 router.get("/search/:term", [], AuthController.searchFilterUsers);
@@ -192,7 +195,7 @@ router.post("/login", [
 ], AuthController.login);
 router.post("/register", [
     (0, express_validator_1.body)("name", "El nombre es requerido").not().isEmpty(),
-    (0, express_validator_1.body)("email", "El correo es obligatorio").not().isEmpty().isEmail().withMessage("El correo electrónico no es correcto"),
+    (0, express_validator_1.body)("email", "El correo es obligatorio").not().isEmpty().isEmail().withMessage("El correo electrónico no es correcto").custom(db_validators_custom_help_1.emailExist),
     (0, express_validator_1.body)("password", "La contraseña es obligatorio").not().isEmpty(),
     (0, express_validator_1.body)("rol", "El rol es requerido").not().isEmpty(),
     validate_inputs_1.validateInputs
@@ -205,7 +208,7 @@ exports.default = router;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-13T18:22:28.093Z
+                at 2023-05-13T23:10:47.617Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
