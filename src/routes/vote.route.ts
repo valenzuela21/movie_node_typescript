@@ -9,7 +9,7 @@ router.get("/", [], VoteController.listVoteMovie);
 router.get("/list_group", [], VoteController.listGroupVoteByMovie);
 router.post("/", [
     validateJwt,
-    body("score", "Ingrese el campo score no puede estar vacio").not().isEmpty().isInt({ min: 0, max: 5 }).withMessage("El campo score es númerico de 0 a 5"),
+    body("score", "Ingrese el campo score no puede estar vacio").not().isEmpty().isInt({ min: 0, max: 100 }).withMessage("El campo score es númerico de 0 a 100"),
     body("movie", "Ingrese el campo movie el ID MOVIE").not().isEmpty().isMongoId().withMessage("Ingrese la ID Movie"),
     validateInputs
 ], VoteController.addVoteMovie);

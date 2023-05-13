@@ -1,6 +1,10 @@
 import {Request, Response} from "express";
 import {IVote, Vote} from "../models/vote.model";
 
+function calcularPorcentaje(number: string){
+    console.log(number);
+    return parseInt(number) % 5;
+}
 export const listGroupVoteByMovie = async (req: Request, res: Response) => {
     const pageNumber: number = req.body.offset || 1;
     const nPerPage: number = req.body.perpage || 12;
@@ -10,12 +14,13 @@ export const listGroupVoteByMovie = async (req: Request, res: Response) => {
                 $group: {
                     _id: "$movie",
                     vote: {
-                        "$sum": "$score"
+                        "$sum":"$score"
                     },
                     total: {$sum: 1}
                 },
 
             },
+            {"$set": {"vote": {$divide: ["$vote", "$total"]}}},
             {"$skip": pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0},
             {"$limit": nPerPage},
         ]);
