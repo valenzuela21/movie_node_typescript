@@ -7,3 +7,5 @@ npm run build
 npm run watch
 npm run test
 ```
+
+Change .env.example by .env
