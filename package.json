@@ -4,7 +4,7 @@
   "description": "Back movies 2023",
   "main": "server.js",
   "scripts": {
-    "start": "node dist/server",
+    "start": "node dist/src/server",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "build-ts": "tsc",
     "build": "rm -rf dist/ && npm run build-ts && npm run lint",
