@@ -1,5 +1,6 @@
 import {Request, Response} from "express";
 import {IMovie, Movie} from "../models/movie.model";
+import {User} from "../models/user.model";
 
 export const listMovies  =  async (req: Request, res: Response) => {
     const pageNumber: number = req.body.offset || 1;
@@ -38,4 +39,21 @@ export const addNewMovie = async (req: Request, res: Response) => {
     const movie = new Movie(data);
     await movie.save();
     return res.status(201).json(movie);
+};
+
+
+export const searchFilterMovies = async (req: Request, res: Response) => {
+    const term: string = req.params.term;
+    if(term.length >= 4){
+        res.status(401).json({
+            msg: "El término de busqueda debe ser mayor 4 letras"
+        });
+        return;
+    }
+
+    const regex = new RegExp( term, "i" );
+    const result = await Movie.find({
+        title: regex
+    });
+    res.status(201).json(result);
 };

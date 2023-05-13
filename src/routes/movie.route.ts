@@ -7,11 +7,11 @@ import {Router} from "express";
 
 const router: Router = Router();
 
-router.get("/list",[
+router.get("/list", [
     validateNumberNegative
-],  MovieController.listMovies);
-
-router.post("/",[
+], MovieController.listMovies);
+router.get("/search/:term", [], MovieController.searchFilterMovies);
+router.post("/", [
     validateJwt,
     body("title", "El campo titulo es requerido").not().isEmpty(),
     validateInputs
