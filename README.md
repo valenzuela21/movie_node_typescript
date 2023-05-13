@@ -1,6 +1,6 @@
 # Movie Node Typescript
 
-## Comand Start
+## Command Start
 ```
 npm run start
 npm run build
