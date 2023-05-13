@@ -1,4 +1,4 @@
-import {NextFunction, Request, Response} from "express";
+import {Request, Response} from "express";
 import {IComment, Comment} from "../models/comments.model";
 import {Movie} from "../models/movie.model";
 
@@ -37,7 +37,12 @@ export const listComments = async (req: Request | any, res: Response) => {
         .skip(pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0)
         .limit(nPerPage);
 
-    res.status(201).json(comments);
+
+    res.status(201).json({
+        data: comments,
+        page: pageNumber + 1,
+        limit: nPerPage
+    });
 };
 
 

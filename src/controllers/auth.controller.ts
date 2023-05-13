@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
-import {User} from "../models/user.model";
 import bcryptjs from "bcrypt";
+import {User} from "../models/user.model";
 import {generateJwtHelp} from "../helpers/generate-jwt.help";
 
 export const login = async (req: Request, res: Response) => {
@@ -50,4 +50,29 @@ export const register = async (req: Request, res: Response) => {
     res.json({
         user
     });
+};
+
+export const listUsers = async (req: Request, res: Response) => {
+    const pageNumber: number = req.body.offset || 1;
+    const nPerPage: number = req.body.perpage || 12;
+    const users = await User.find()
+        .sort({_id: 1})
+        .skip(pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0)
+        .limit(nPerPage);
+
+    res.status(201).json({
+        data: users,
+        page: pageNumber + 1,
+        limit: nPerPage
+    });
+
+};
+
+export const searchFilterUsers = async (req: Request, res: Response) => {
+    const term: string = req.params.term;
+    const regex = new RegExp( term, "i" );
+    const result = await User.find({
+        $or: [{ name: regex }, { email: regex }]
+    });
+    res.status(201).json(result);
 };

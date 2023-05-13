@@ -41,7 +41,12 @@ export const listVoteMovie = async (req: Request, res: Response) => {
         .sort({_id: 1})
         .skip(pageNumber > 0 ? ((pageNumber - 1) * nPerPage) : 0)
         .limit(nPerPage);
-    return res.status(201).json(votes);
+
+    res.status(201).json({
+        data: votes,
+        page: pageNumber + 1,
+        limit: nPerPage
+    });
 };
 
 export const addVoteMovie = async (req: Request | any, res: Response) => {

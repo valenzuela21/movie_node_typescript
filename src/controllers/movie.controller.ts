@@ -8,7 +8,12 @@ export const listMovies  =  async (req: Request, res: Response) => {
         .sort( { _id: -1 } )
         .skip( pageNumber > 0 ? ( ( pageNumber - 1 ) * nPerPage ) : 0 )
         .limit( nPerPage );
-    return res.status(201).json(movies);
+
+    res.status(201).json({
+        data: movies,
+        page: pageNumber + 1,
+        limit: nPerPage
+    });
 };
 
 
