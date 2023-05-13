@@ -1,6 +1,5 @@
 import {Request, Response} from "express";
 import {IMovie, Movie} from "../models/movie.model";
-import {User} from "../models/user.model";
 
 export const listMovies  =  async (req: Request, res: Response) => {
     const pageNumber: number = req.body.offset || 1;
@@ -38,7 +37,9 @@ export const addNewMovie = async (req: Request, res: Response) => {
 
     const movie = new Movie(data);
     await movie.save();
-    return res.status(201).json(movie);
+    return res.status(201).json({
+        msg: "Se ha creado nueva movie"
+    });
 };
 
 
