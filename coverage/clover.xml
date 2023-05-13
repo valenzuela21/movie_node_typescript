@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683956736011" clover="3.2.0">
-  <project timestamp="1683956736011" name="All files">
-    <metrics statements="699" coveredstatements="414" conditionals="412" coveredconditionals="163" methods="156" coveredmethods="45" elements="1267" coveredelements="622" complexity="0" loc="699" ncloc="699" packages="14" files="42" classes="42"/>
+<coverage generated="1684002148139" clover="3.2.0">
+  <project timestamp="1684002148139" name="All files">
+    <metrics statements="699" coveredstatements="384" conditionals="412" coveredconditionals="156" methods="156" coveredmethods="36" elements="1267" coveredelements="576" complexity="0" loc="699" ncloc="699" packages="14" files="42" classes="42"/>
     <package name="dist.src">
       <metrics statements="28" coveredstatements="28" conditionals="9" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <file name="app.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/app.js">
@@ -53,7 +53,7 @@
       </file>
     </package>
     <package name="dist.src.controllers">
-      <metrics statements="169" coveredstatements="69" conditionals="103" coveredconditionals="32" methods="59" coveredmethods="11"/>
+      <metrics statements="169" coveredstatements="62" conditionals="103" coveredconditionals="30" methods="59" coveredmethods="9"/>
       <file name="auth.controller.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/controllers/auth.controller.js">
         <metrics statements="53" coveredstatements="16" conditionals="32" coveredconditionals="9" methods="16" coveredmethods="1"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
@@ -162,14 +162,14 @@
         <line num="9" count="1" type="stmt"/>
       </file>
       <file name="movie.controller.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/controllers/movie.controller.js">
-        <metrics statements="35" coveredstatements="26" conditionals="21" coveredconditionals="17" methods="13" coveredmethods="10"/>
+        <metrics statements="35" coveredstatements="19" conditionals="21" coveredconditionals="15" methods="13" coveredmethods="8"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
-        <line num="3" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="3" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
@@ -180,14 +180,14 @@
         <line num="21" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
@@ -240,7 +240,7 @@
       </file>
     </package>
     <package name="dist.src.helpers">
-      <metrics statements="41" coveredstatements="31" conditionals="34" coveredconditionals="26" methods="14" coveredmethods="10"/>
+      <metrics statements="41" coveredstatements="25" conditionals="34" coveredconditionals="22" methods="14" coveredmethods="7"/>
       <file name="generate-jwt.help.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/helpers/generate-jwt.help.js">
         <metrics statements="13" coveredstatements="7" conditionals="10" coveredconditionals="6" methods="4" coveredmethods="1"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
@@ -258,13 +258,13 @@
         <line num="23" count="1" type="stmt"/>
       </file>
       <file name="validateJwt.help.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/helpers/validateJwt.help.js">
-        <metrics statements="28" coveredstatements="24" conditionals="24" coveredconditionals="20" methods="10" coveredmethods="9"/>
+        <metrics statements="28" coveredstatements="18" conditionals="24" coveredconditionals="16" methods="10" coveredmethods="6"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
-        <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="cond" truecount="3" falsecount="0"/>
         <line num="12" count="1" type="cond" truecount="3" falsecount="1"/>
@@ -278,29 +278,29 @@
         <line num="21" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="29" count="0" type="stmt"/>
-        <line num="33" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
       </file>
     </package>
     <package name="dist.src.middlewares">
-      <metrics statements="16" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="16" coveredstatements="11" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="validate-inputs.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/middlewares/validate-inputs.js">
-        <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
       </file>
       <file name="validate-number-negative.js" path="/Users/davidvalenzuelapardo/Desktop/back_movies/dist/src/middlewares/validate-number-negative.js">
@@ -538,52 +538,52 @@
       <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <file name="app.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/app.ts">
         <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
       <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="db.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/config/db.ts">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="114" coveredstatements="33" conditionals="44" coveredconditionals="5" methods="30" coveredmethods="4"/>
+      <metrics statements="114" coveredstatements="26" conditionals="44" coveredconditionals="5" methods="30" coveredmethods="2"/>
       <file name="auth.controller.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/controllers/auth.controller.ts">
         <metrics statements="38" coveredstatements="7" conditionals="10" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -598,19 +598,19 @@
         <line num="29" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
         <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="58" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
         <line num="73" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="74" count="0" type="stmt"/>
@@ -621,9 +621,9 @@
       </file>
       <file name="comment.controller.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/controllers/comment.controller.ts">
         <metrics statements="27" coveredstatements="6" conditionals="13" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -632,17 +632,17 @@
         <line num="23" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="33" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
         <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="52" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
         <line num="87" count="0" type="stmt"/>
         <line num="88" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
@@ -651,27 +651,27 @@
       </file>
       <file name="home.controller.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/controllers/home.controller.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
       <file name="movie.controller.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/controllers/movie.controller.ts">
-        <metrics statements="23" coveredstatements="15" conditionals="8" coveredconditionals="5" methods="6" coveredmethods="4"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <metrics statements="23" coveredstatements="8" conditionals="8" coveredconditionals="5" methods="6" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="27" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="49" count="0" type="stmt"/>
@@ -682,20 +682,20 @@
       </file>
       <file name="vote.controller.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/controllers/vote.controller.ts">
         <metrics statements="24" coveredstatements="4" conditionals="13" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
         <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
         <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="38" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
@@ -709,11 +709,11 @@
       </file>
     </package>
     <package name="src.helpers">
-      <metrics statements="24" coveredstatements="15" conditionals="6" coveredconditionals="1" methods="5" coveredmethods="2"/>
+      <metrics statements="24" coveredstatements="11" conditionals="6" coveredconditionals="1" methods="5" coveredmethods="2"/>
       <file name="generate-jwt.help.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/helpers/generate-jwt.help.ts">
         <metrics statements="8" coveredstatements="2" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -722,39 +722,39 @@
         <line num="11" count="0" type="stmt"/>
       </file>
       <file name="validateJwt.help.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/helpers/validateJwt.help.ts">
-        <metrics statements="16" coveredstatements="13" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <metrics statements="16" coveredstatements="9" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="8" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="23" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="10" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="validate-inputs.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/middlewares/validate-inputs.ts">
-        <metrics statements="6" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="6" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
       <file name="validate-number-negative.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/middlewares/validate-number-negative.ts">
         <metrics statements="4" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="5" count="0" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
@@ -764,109 +764,109 @@
       <metrics statements="19" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="comments.model.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/models/comments.model.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
       </file>
       <file name="movie.model.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/models/movie.model.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
       </file>
       <file name="user.model.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/models/user.model.ts">
         <metrics statements="10" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
       </file>
       <file name="vote.model.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/models/vote.model.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
       <metrics statements="54" coveredstatements="54" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="auth.route.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/auth.route.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
       </file>
       <file name="comment.route.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/comment.route.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
       </file>
       <file name="home.route.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/home.route.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
       </file>
       <file name="movie.route.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/movie.route.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
       </file>
       <file name="vote.route.ts" path="/Users/davidvalenzuelapardo/Desktop/back_movies/src/routes/vote.route.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
       </file>
     </package>
   </project>

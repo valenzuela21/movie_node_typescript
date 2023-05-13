@@ -11,7 +11,7 @@ const app =  express();
 
 dotenv.config({path: ".env"});
 
-const paths = {
+export const paths = {
     home:       "/",
     auth:       "/api/auth",
     movie:      "/api/movie",
