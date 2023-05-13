@@ -9,7 +9,6 @@ export const emailExist = async (email: string = "") => {
     }
 };
 
-
 export const existMovieById = async( id: ObjectId ) => {
     const existMovie = await Movie.findById(id);
     if ( !existMovie ) {
