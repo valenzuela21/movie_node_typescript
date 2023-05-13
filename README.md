@@ -13,8 +13,10 @@ Change .env.example by .env
 
 Solution Error en Testing
 
-Note: Update these last two packages to the latest versions
-´´´
+Note: Update these last two packages to the latest versions.
+
+
+```
  npm i typescript@latest --save-dev
  npm install --save-dev ts-node@latest    
-´´´
+```
