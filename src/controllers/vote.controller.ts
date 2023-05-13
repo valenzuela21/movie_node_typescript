@@ -50,7 +50,7 @@ export const addVoteMovie = async (req: Request | any, res: Response) => {
     const existScore = await Vote.findOne({user: user_id, movie: movie});
     if (existScore) {
         res.status(401).json({
-            msg: "No puedes votar..."
+            msg: "No puedes votar nuevamente, solo una vez..."
         });
         return;
     }
