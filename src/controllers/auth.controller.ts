@@ -70,7 +70,7 @@ export const listUsers = async (req: Request, res: Response) => {
 
 export const searchFilterUsers = async (req: Request, res: Response) => {
     const term: string = req.params.term;
-    if(term.length >= 4){
+    if(term.length <= 4){
         res.status(401).json({
             msg: "El término de busqueda debe ser mayor 4 letras"
         });
